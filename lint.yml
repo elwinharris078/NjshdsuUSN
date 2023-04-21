@@ -20,11 +20,6 @@ jobs:
     # run only if 'python' files were changed
     - name: python tests
       if: steps.filter.outputs.python == 'true'
-      run: echo "Python file"
-    # run only if not 'python' files were changed
-    - name: not python tests
-      if: steps.filter.outputs.python != 'true'
-      run: echo "NOT python file"
 
   ruff:
     strategy:
